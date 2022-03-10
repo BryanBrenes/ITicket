@@ -8,27 +8,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>Crear Concierto</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="css/CrearEvento.css">
     </head>
     <body>
         <h1>Datos del Concierto</h1>
-        <form   th:object ="${concierto}"
+        <form   th:object ="${conciertos}"
                 th:action ="@{/save}"
                 method="POST"
             >
             <label for="Artista">Artista:</label>
-            <input type="text" th:field="*{artista}" placeholder="Nombre Persona" name="nombre"/>
+            <input type="text" th:field="*{artista}" placeholder="Artista" name="artista"/>
             <br>
             <label for="apellido1">Costo:</label>
-            <input type="text" th:field="*{costo}" placeholder="Apellido 1" name="apellido1"/>
+            <input type="text" th:field="*{costo}" placeholder="Costo" name="costo"/>
             <br>
             <label for="apellido2">Fecha:</label>
-            <input type="text" th:field="*{fecha}" placeholder="Apellido 2" name="apellido2"/>
+            <input type="text" th:field="*{fecha}" placeholder="Fecha" name="fecha"/>
             <br>
             <label for="telefono">Capacidad Maxima:</label>
-            <input type="text" th:field="*{capacidad_Max}" placeholder="Telefono" name="telefono"/>
+            <input type="text" th:field="*{capacidad_Max}" placeholder="Capacidad" name="capacidad_max"/>
             <br>
             <label for="email">Lugar:</label>
-            <input type="text" th:field="*{lugar}" placeholder="Email" name="email"/>
+            <input type="text" th:field="*{lugar}" placeholder="Lugar" name="lugar"/>
             <br>
             <button type="submit" value="guardar"> Guardar </button>
             
